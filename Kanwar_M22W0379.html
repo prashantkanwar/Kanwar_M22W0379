@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-3</title>
+    <script>
+        class Player {
+            constructor(name) {
+                this.name = name;
+                this.lives = 3;
+            }
+
+            //to lose one life
+            loseLife() {
+                if (this.lives >= 1) {
+                    this.lives--;
+                } else {
+                    console.log("game over");
+                }
+            }
+
+            //to return the number of remaining lives
+            getLives() {
+                return this.lives;
+            }
+        }
+
+        const player = new Player("Jack");
+        console.log(player.getLives());
+        player.loseLife();
+        console.log(player.getLives());
+        player.loseLife();
+        console.log(player.getLives());
+        player.loseLife();
+        console.log(player.getLives());
+        player.loseLife();
+        console.log(player.getLives());
+
+        //Second Part
+        const numbers1 = {
+
+            numberOne: 12,
+
+            numberTwo: 15
+
+        };
+
+        const numbers2 = {
+
+            numberOne: -5,
+
+            numberTwo: 41
+
+        };
+
+        function getLargerSumObject(number1, number2) {
+            let number1Total = number1.numberOne + number1.numberTwo;
+            let number2Total = number2.numberOne + number2.numberTwo;
+
+            if (number1Total > number2Total) {
+                return number1Total;
+            } else {
+                return number2Total;
+            }
+        }
+
+        console.log("The larger sum of the number is:" +
+            getLargerSumObject(numbers1, numbers2));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
